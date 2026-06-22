@@ -21,15 +21,37 @@
             return;
         }
 
-        Console.WriteLine();
+        var s = Console.ReadLine();
+        if (s.Length == 0 || s.Length > 1)
+        {
+            Console.WriteLine("Wrong sign");
+            return;
+        }
 
-        Console.WriteLine("Your results: ");
-        Console.WriteLine();
+        switch(s[0])
+        {
+            case '&':
+                Convert.ToString(a, 2);
+                Convert.ToString(b, 2);
+                Console.WriteLine("Result of {0} & {1} = {2}", a, b, a & b);
+                break;
+            case '-':
+                Console.WriteLine("Result of {0} - {1} = {2}", a, b, a - b);
+                break;
+            case '*':
+                Console.WriteLine("Result of {0} * {1} = {2}", a, b, a * b);
+                break;
+            case '/':
+                Console.WriteLine("Result of {0} / {1} = {2}", a, b, a / b);
+                break;
+            case '%':
+                Console.WriteLine("Result of {0} % {1} = {2}", a, b, a % b);
+                break;
+            default: Console.WriteLine("Wrong sign");
+                break;
+        }
 
-        Console.WriteLine("Result of {0} + {1} = {2}", a, b, a + b);
-        Console.WriteLine("Result of {0} - {1} = {2}", a, b, a - b);
-        Console.WriteLine("Result of {0} * {1} = {2}", a, b, a * b);
-        Console.WriteLine("Result of {0} / {1} = {2}", a, b, a / b);
-        Console.WriteLine("Result of {0} % {1} = {2}", a, b, a % b);
+        //Console.WriteLine("Your results: ");
+         
     }
 }
