@@ -47,10 +47,16 @@
                 Console.WriteLine("HEX:     {0} & {1} = 0x{2}", a, b, Convert.ToString(result, 16));
                 break;
             case '|':
-                Console.WriteLine("Result of {0} | {1} = {2}", a, b, a | b);
+                result = a | b;
+                Console.WriteLine("Decimal: {0} | {1} = {2}", a, b, result);
+                Console.WriteLine("Binary:  {0} | {1} = 0b{2}", a, b, Convert.ToString(result, 2));
+                Console.WriteLine("HEX:     {0} | {1} = 0x{2}", a, b, Convert.ToString(result, 16));                
                 break;
             case '^':
-                Console.WriteLine("Result of {0} ^ {1} = {2}", a, b, a ^ b);
+                result = a ^ b;                
+                Console.WriteLine("Decimal: {0} | {1} = {2}", a, b, result);
+                Console.WriteLine("Binary:  {0} | {1} = 0b{2}", a, b, Convert.ToString(result, 2));
+                Console.WriteLine("HEX:     {0} | {1} = 0x{2}", a, b, Convert.ToString(result, 16));
                 break;
             default: Console.WriteLine("Wrong sign");
                 break;
