@@ -1,11 +1,29 @@
 ﻿
-int[] array1 = new[] { 42, 3, 12, 552 };
-float[] array2 = new[] { 12.56f, 6.5f, 72.1f, 32, 98f };
+class Program
+{
+    static void Main()
+    {
+        int[] numFib = new int[] { 0, 1, 2, 3, 5, 8, 13, 21 };
+        string[] months = new string[12]
+        {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        };
 
-var results = Array.CreateInstance(typeof(float), 4);
-results.SetValue(array1[0] * array2[0], 0);
-//Console.WriteLine(results.GetValue(0));
+        char example = '\u0420';
+        string example2 = "ahsdj12";
 
-//Array.Reverse(array2);
-Console.WriteLine(array2.Min());
-Console.WriteLine(array2.Max());
+        Console.WriteLine(example2);
+        Console.WriteLine(example);
+    }
+}
