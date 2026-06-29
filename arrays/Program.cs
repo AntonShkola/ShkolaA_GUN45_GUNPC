@@ -20,10 +20,22 @@ class Program
             "December"
         };
 
-        char example = '\u0420';
-        string example2 = "ahsdj12";
+        int[,] matrix = new int[3, 3]
+        {
+            {2, 3, 4},
+            {4, 6, 8},
+            {16, 27, 64}
+        };
 
-        Console.WriteLine(example2);
-        Console.WriteLine(example);
+        double[][] jagg = new double[3][];
+        jagg[0] = new double [] { 1, 2, 3, 4, 5 };
+        jagg[1] = new double [] {Math.E, Math.PI };
+        jagg[2] = new double[]
+        {
+            Math.Log10 (1.0),
+            Math.Log10 (10.0),
+            Math.Log10 (100.0),
+            Math.Log10 (1000.0)
+        };       
     }
 }
