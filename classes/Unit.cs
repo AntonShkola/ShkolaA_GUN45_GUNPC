@@ -1,17 +1,32 @@
-﻿
-
 public class Unit
 {
-    private float _health; // поле
+    private float _health;
 
-    public string Name { get; } // свойство
-    public float Health => _health; // свойство
+    public string Name { get; }
+    public float Health => _health;
+    public int Damage { get; }
+    public float Armor { get; }
 
-    public Unit(): this(name:"Default name") // конструктор без аргуементо вызываюещего
+    public Unit() : this("Unknown Unit")
     {
     }
-    public Unit(string name) // конструктор с прокидыванием значения
+
+    public Unit(string name)
     {
         Name = name;
+        Damage = 5;
+        Armor = 0.6f;
+        _health = 100f;
+    }
+
+    public float GetRealHealth()
+    {
+        return Health * (1f + Armor);
+    }
+
+    public bool SetDamage(float value)
+    {
+        _health = Health - value * Armor;
+        return Health <= 0f;
     }
 }
