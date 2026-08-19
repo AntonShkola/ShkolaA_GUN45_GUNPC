@@ -3,7 +3,7 @@ public class Unit
     private float _health;
 
     public string Name { get; }
-    public float Health => _health;
+    public float Health => _health; // Что значит => в этом контексте? 
     public int Damage { get; }
     public float Armor { get; }
 
