@@ -1,16 +1,23 @@
 public class Unit
 {
+    // объ€вление приватного пол€ класса
     private float _health;
 
+    // объ€вление свойства
     public string Name { get; }
-    public float Health => _health; // „то значит => в этом контексте? 
+    public float Health
+    {
+        get { return _health; }
+    } 
     public int Damage { get; }
     public float Armor { get; }
 
+    // конструктор 1
     public Unit() : this("Unknown Unit")
     {
     }
 
+    // конструктор 2
     public Unit(string name)
     {
         Name = name;

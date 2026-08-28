@@ -1,4 +1,4 @@
-//// Демонстрация Unit
+// Демонстрация Unit
 
 //Console.WriteLine("=== Unit ===");
 //Unit hero = new Unit("Hero");

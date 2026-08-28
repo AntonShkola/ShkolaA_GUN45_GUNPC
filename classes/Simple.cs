@@ -1,45 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿Person john = new Person();
+Person mike = new Person("Mike");
+Person lisa = new Person("Lisa", 39);
 
-namespace Lesson
+john.Print();
+mike.Print();
+lisa.Print();
+
+class Person
 {
-    class Program
+    public string name; // объявление поля класса
+    public int age; // объявление поля класса
+    public Person() { name = "Unknown"; age = 20; } // объявление конструктора класса 
+    public Person(string name) { this.name = name; }
+    public Person(string name, int age)
     {
-        enum Color
-        {
-            Red,
-            Green,
-            Blue,
-            Yellow,
-            Orange
-        }
-
-        class Point
-        {
-            public int x;
-            public int y;
-            public Color color;
-        }
-
-        class Stident
-        {
-            public Guid id;
-            public string firstName;
-            public string lastName;
-            public string middleName;
-            public int age;
-            public string group;
-        }
-
-        static void Main(string[] args)
-        {
-            Point p = new Point();
-            p.x = 4;
-            p.y = 2;
-            p.color = Color.Red;
-
-            Console.WriteLine($"X: {p.x} | Y: {p.y} | Color: {p.color}");          
-        }
+        this.name = name;
+        this.age = age;
     }
+
+    public void Print() => Console.WriteLine($"Name: {name}, Age: {age}"); // метода вывода в консоль
 }
