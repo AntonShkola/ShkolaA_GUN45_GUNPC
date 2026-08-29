@@ -5,11 +5,17 @@ public class Unit
 
     // объ€вление свойства
     public string Name { get; }
+
+    // объ€вление свойства
     public float Health
     {
         get { return _health; }
-    } 
+    }
+
+    // объ€вление свойства
     public int Damage { get; }
+
+    // объ€вление свойства
     public float Armor { get; }
 
     // конструктор 1
